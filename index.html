@@ -559,6 +559,10 @@
     document.getElementById("salesElem").addEventListener('click', event=> {
       event.preventDefault()
       console.log('click')
+      _cio.track("clickedSales")
+      _cio.identify({
+        id: 'anonid1234',
+      });
     }) 
   </script>
 </body>
