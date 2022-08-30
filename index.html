@@ -325,7 +325,7 @@
                 <i class="fa fa-bar-chart-o fa-5x"></i>
                 <h3>8,457</h3>
               </div>
-              <div class="panel-footer back-footer-green">
+              <div class="panel-footer back-footer-green" id="dailyElem">
                 Daily Visits
 
               </div>
@@ -557,9 +557,11 @@
         event.preventDefault()
         console.log('click')
         _cio.track("clickedSales")
-        _cio.identify({
-          id: 'anonid1234',
-        });
+      }) 
+    document.getElementById("dailyElem").addEventListener('click', event => {
+        event.preventDefault()
+        console.log('click')
+        _cio.track("clickedDaily")
       }) 
   </script>
   
