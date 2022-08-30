@@ -553,18 +553,16 @@
       //t.src = 'https://assets.customer.io/assets/track-eu.js'
       s.parentNode.insertBefore(t, s);
     })();
+    document.getElementById("salesElem").addEventListener('click', event => {
+        event.preventDefault()
+        console.log('click')
+        _cio.track("clickedSales")
+        _cio.identify({
+          id: 'anonid1234',
+        });
+      }) 
   </script>
   
-   <script>
-    document.getElementById("salesElem").addEventListener('click', event=> {
-      event.preventDefault()
-      console.log('click')
-      _cio.track("clickedSales")
-      _cio.identify({
-        id: 'anonid1234',
-      });
-    }) 
-  </script>
 </body>
 
 </html>
