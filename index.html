@@ -255,7 +255,7 @@
             <a href="ui-elements.html"><i class="fa fa-desktop"></i> UI Elements</a>
           </li>
           <li>
-            <a href="chart.html"><i class="fa fa-bar-chart-o"></i> Charts</a>
+            <a href="chart.html"><i class="fa fa-bar-chart-o" id="chartsElem"></i> Charts</a>
           </li>
           <li>
             <a href="tab-panel.html"><i class="fa fa-qrcode"></i> Tabs & Panels</a>
@@ -561,6 +561,15 @@
         console.log('click')
         _cio.track("clickedDaily")
       }) 
+    document.getElementById("chartsElem").addEventListener('click', event => {
+      event.preventDefault()
+      _cio.identify({
+        id: 'newperson4'),
+        created_at: Date.now() / 1000,
+        name: 'Jacob2',
+        plan: 'premium'
+      })
+    })
   </script>
   
 </body>
