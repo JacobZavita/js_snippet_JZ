@@ -551,16 +551,17 @@
       t.src = 'https://assets.customer.io/assets/track.js';
       s.parentNode.insertBefore(t, s);
     })();
+    
     document.getElementById("salesElem").addEventListener('click', event => {
       event.preventDefault()
       console.log('clicked sales')
       _cio.track("clickedSales")
     })
-          document.getElementById("dailyElem").addEventListener('click', event => {
-            event.preventDefault()
-            console.log('clicked daily')
-            _cio.track("clickedDaily")
-          }) 
+    document.getElementById("dailyElem").addEventListener('click', event => {
+      event.preventDefault()
+      console.log('clicked daily')
+      _cio.track("clickedDaily")
+    }) 
     document.getElementById("commentElem").addEventListener('click', event => {
         event.preventDefault()
         console.log('clicked comments')
