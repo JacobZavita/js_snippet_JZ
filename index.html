@@ -553,22 +553,14 @@
     })();
     document.getElementById("salesElem").addEventListener('click', event => {
         event.preventDefault()
-        console.log('click')
+        console.log('clicked sales')
         _cio.track("clickedSales")
       }) 
     document.getElementById("dailyElem").addEventListener('click', event => {
         event.preventDefault()
-        console.log('click')
+        console.log('clicked daily')
         _cio.track("clickedDaily")
       }) 
-    document.getElementById("chartsElem").addEventListener('click', event => {
-      event.preventDefault()
-      _cio.identify({
-        id: 'newperson4'),
-        created_at: Date.now() / 1000,
-        name: 'Jacob2',
-        plan: 'premium'
-      })
     })
   </script>
   
