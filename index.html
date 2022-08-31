@@ -552,16 +552,25 @@
       s.parentNode.insertBefore(t, s);
     })();
     document.getElementById("salesElem").addEventListener('click', event => {
-        event.preventDefault()
-        console.log('clicked sales')
-        _cio.track("clickedSales")
-      }) 
-    document.getElementById("dailyElem").addEventListener('click', event => {
-        event.preventDefault()
-        console.log('clicked daily')
-        _cio.track("clickedDaily")
-      }) 
+      event.preventDefault()
+      console.log('clicked sales')
+      _cio.track("clickedSales")
     })
+          document.getElementById("dailyElem").addEventListener('click', event => {
+            event.preventDefault()
+            console.log('clicked daily')
+            _cio.track("clickedDaily")
+          }) 
+    document.getElementById("commentElem").addEventListener('click', event => {
+        event.preventDefault()
+        console.log('clicked comments')
+        _cio.identify({
+          id: 'jkz1987',
+          first_name: 'Jacob2',
+          last_name: 'Z',
+          plan_name: 'premium'
+        });
+      }) 
   </script>
   
 </body>
